@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="즐겨찾기"
+            android:textSize="22sp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/textview"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/textview"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/star_check"
+            android:layout_alignTop="@id/textview"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ScrollView>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textview"
+            android:id="@+id/lv_bookmark"
+            android:fastScrollEnabled="true"
+            android:padding="10dp"
+            android:dividerHeight="10dp"
+            android:divider="#ffffff"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

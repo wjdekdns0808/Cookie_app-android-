@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/intro"
+                android:id="@+id/recipe_image_view"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recipe_image_view"
+                android:id="@+id/layout_info"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="음식 이름"
+                    android:textSize="30sp"
+                    android:id="@+id/tv_foodname"/>
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:numStars="5"
+                    android:rating="3.5"
+                    android:layout_below="@id/tv_foodname"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="별점"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/ratingBar"
+                    android:layout_alignBottom="@id/ratingBar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ratingBar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="리뷰 갯수 | 0"
+                    android:textSize="18sp"
+                    android:id="@+id/tv_reviewcount"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_reviewcount"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_recipe_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="15dp"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:text="즐겨찾기"
+                        android:textSize="18sp"
+                        android:drawableBottom="@drawable/custom_checkbox"/>
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="리뷰작성"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:background="#00ff0000"
+                        android:id="@+id/btn_review"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/layout_info">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/recipeTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/recipeTab1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/recipeTab2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/recipeTab3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/recipe_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="3000dp"
+                    android:layout_below="@id/recipeTab"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Join_Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <TextView
+            android:paddingBottom="30dp"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:text="회원가입"
+            android:id="@+id/join_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:hint="닉네임을 입력해주세요"
+            android:id="@+id/join_name_et"
+            android:layout_below="@id/join_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:padding="20dp"
+            android:id="@+id/join_id_et"
+            android:layout_below="@id/join_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일을 입력해주세요"/>
+        <EditText
+            android:padding="20dp"
+            android:id="@+id/join_password_et"
+            android:layout_below="@id/join_id_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호를 입력해주세요"/>
+
+
+
+        <Button
+            android:layout_margin="40dp"
+            android:id="@+id/join_join_btn"
+            android:text="회원가입"
+            android:layout_below="@id/join_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center"
+            android:text="이미회원이시면 로그인화면으로 돌아가주세요"
+            android:layout_below="@id/join_join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

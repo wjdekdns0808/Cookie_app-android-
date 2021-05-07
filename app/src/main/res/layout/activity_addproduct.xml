@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="물품"
+                android:textSize="30dp"
+                android:textColor="#D834F1A5"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="넣기"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spin1"
+                android:autofillHints="카테고리"
+                android:scrollbarSize="40dp"
+                />
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spin2"
+                android:autofillHints="식품"
+                android:scrollbarSize="40dp"
+                android:clickable="true"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_ea"
+                android:hint="갯수"
+                android:scrollbarSize="40dp"
+                android:inputType="number"
+                android:clickable="false"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="개"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="넣기"
+                android:hint="나가기"
+                android:textSize="20dp"
+                android:id="@+id/btn_input"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="#D834F1A5"
+                android:textColor="#000000"
+                android:onClick="onClickAdd"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나가기"
+                android:textSize="20dp"
+                android:id="@+id/btn_exit"
+                android:backgroundTint="#D834F1A5"
+                android:textColor="#000000"
+                android:onClick="onClickExit"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

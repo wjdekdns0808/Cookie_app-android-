@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="리뷰 작성"
+        android:textSize="30sp"
+        android:padding="7dp"
+        android:id="@+id/tv_review"/>
+
+    <RatingBar
+        android:id="@+id/ratingReview"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_review"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:stepSize="1"
+        android:isIndicator="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ratingReview"
+        android:layout_alignBottom="@id/ratingReview"
+        android:text="별점을 입력하세요."
+        android:textSize="12sp"
+        android:id="@+id/tv_rating"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/tv_rating"
+        android:layout_marginTop="5dp"
+        android:gravity="top"
+        android:padding="5dp"
+        android:hint="내용을 입력하세요"
+        android:textSize="20sp"
+        android:background="@drawable/review_edittext"
+        android:id="@+id/et_review"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/et_review"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="작 성"
+            android:textSize="20sp"
+            android:id="@+id/reviewWrite"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="취 소"
+            android:textSize="20sp"
+            android:id="@+id/reviewCancel"/>
+    </LinearLayout>
+
+</RelativeLayout>

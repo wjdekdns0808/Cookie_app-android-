@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Activity">
+
+    <RelativeLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:layout_centerHorizontal="true"
+            android:id="@+id/icoo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/icon_tv"
+            android:layout_below="@id/icoo_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:hint="이메일"
+            android:id="@+id/id_et"
+            android:layout_below="@id/icon_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:hint="비밀번호"
+            android:layout_below="@id/id_et"
+            android:id="@+id/password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_save_cb"
+            android:layout_below="@id/password_et"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/user_save_cb"
+            android:layout_below="@id/password_et"
+            android:text="자동 로그인"/>
+
+        <Button
+            android:layout_below="@id/user_save_cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_btn"
+            android:text="LOGIN"/>
+
+        <TextView
+            android:id="@+id/join_tv"
+            android:layout_centerHorizontal="true"
+            android:text="계정이없다면 회원가입을눌러주세요"
+            android:layout_below="@id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:text="회원가입"
+            android:id="@+id/join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/join_tv"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
